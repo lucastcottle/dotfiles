@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Kanagawa",
+  "theme": {
+    "images": {
+      "additional_backgrounds": [
+        "images/bg-000-5672c42860d5b06e1058dc477397f3ef.svg"
+      ]
+    },
+    "properties": {
+      "additional_backgrounds_alignment": [
+        "top"
+      ],
+      "additional_backgrounds_tiling": [
+        "repeat"
+      ]
+    },
+    "colors": {
+      "toolbar": "rgb(31, 31, 40)",
+      "toolbar_text": "rgb(200, 192, 147)",
+      "frame": "rgb(31, 31, 40)",
+      "tab_background_text": "rgb(200, 192, 147)",
+      "toolbar_field": "rgb(220, 215, 186)",
+      "toolbar_field_text": "rgb(31, 31, 40)",
+      "tab_line": "rgb(200, 192, 147)",
+      "popup": "rgb(220, 215, 186)",
+      "popup_text": "rgb(106, 149, 137)",
+      "button_background_hover": "rgb(31, 31, 40)",
+      "icons": "rgb(200, 192, 147)",
+      "ntp_text": "rgb(220, 215, 186)",
+      "popup_border": "rgb(31, 31, 40)",
+      "popup_highlight": "rgb(106, 149, 137)",
+      "tab_loading": "rgb(200, 192, 147)"
+    }
+  }
+}
