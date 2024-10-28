@@ -1,0 +1,58 @@
+* {
+  color: #dcd7ba; /* Kanagawa text color */
+  border: none;
+  border-radius: 0;
+  font-family: "IosevkaNerdFontMono-Regula", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: #1f1f28; /* Kanagawa base color */
+  border: 2px solid #16161d; /* Kanagawa crust color */
+	
+}
+
+# workspaces {
+  padding: 0px 0px 0px 0px;
+  margin: 0 0 0 0;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  border-top: 4px solid transparent;
+}
+
+#workspaces button.focused {
+  border-top: 4px solid #7e9cd8; /* Kanagawa blue */
+}
+
+#workspaces button.urgent {
+  border-top: 4px solid #e46876; /* Kanagawa rosewater */
+}
+
+.module {
+  padding: 0 5px;
+  margin: 0;
+}
+
+#mode {
+  background-color: #7e9cd8; /* Kanagawa blue */
+  color: #1f1f28; /* Kanagawa base color */
+}
+
+#custom-next_workspace {
+  padding: 0;
+  margin-right: 5px;
+}
+
+#custom-prev_workspace {
+  padding: 0;
+  margin-left: 5px;
+}
+
+#custom-kill_window {
+  margin-right: 5px;
+}
+

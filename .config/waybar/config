@@ -1,0 +1,259 @@
+{
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"sway/mode",
+		"custom/topbracket1",
+		"sway/workspaces",
+		"custom/bottombracket1",
+		"custom/topbracket1",
+		"tray",
+		"custom/bottombracket1",
+		"custom/topbracket1",
+		"sway/window",
+		"custom/bottombracket1",
+	],
+
+	"modules-right": [
+		"custom/topbracket6",
+		"pulseaudio",
+		"custom/bottombracket6",
+		"custom/topbracket5",
+		"network",
+		"custom/bottombracket5",
+		"custom/topbracket4",
+		"memory",
+		"custom/bottombracket4",
+		"custom/topbracket3",
+		"cpu",
+		"custom/bottombracket3",
+		"custom/topbracket2",
+		"clock#time",
+		"custom/bottombracket2",
+		"custom/topbracket1",
+		"clock#date",
+		"custom/bottombracket1",
+	],
+
+	// Modules
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "{icon} {capacity}% ({time})",
+		"format-charging": " {capacity}% ({time})",
+		"format-charging-full": " {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-alt": "{icon} {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"clock#time": {
+		"interval": 10,
+		"format": "{:%H:%M}",
+		"tooltip": false
+	},
+
+	"clock#date": {
+		"interval": 20,
+		"format": "{:%e %b %Y}",
+		"tooltip": false
+		//"tooltip-format": "{:%e %B %Y}"
+	},
+
+	"cpu": {
+		"interval": 5,
+		"tooltip": false,
+		"format": " {usage}%",
+		"format-alt": " {load}",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
+	"sway/language": {
+		"format": " {}",
+		"min-length": 5,
+		"on-click": "swaymsg 'input * xkb_switch_layout next'",
+		"tooltip": false
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": " {avail}Gib",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		},
+		"tooltip": false
+	},
+
+	"network": {
+		"interval": 5,
+		"format-wifi": " {essid} ({signalStrength}%)",
+		"format-ethernet": " {ifname}",
+		"format-disconnected": "No connection",
+		"format-alt": " {ipaddr}/{cidr}",
+		"tooltip": false
+	},
+
+	"sway/mode": {
+		"format": "{}",
+		"tooltip": false
+	},
+
+	"sway/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	},
+
+	"sway/workspaces": {
+		"disable-scroll-wraparound": true,
+		"smooth-scrolling-threshold": 4,
+		"enable-bar-scroll": true,
+		"format": "{name}"
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"scroll-step": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"tooltip": false
+	},
+
+	"temperature": {
+		"critical-threshold": 90,
+		"interval": 5,
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"tray": {
+		"icon-size": 18
+		//"spacing": 10
+	},
+
+	"custom/topbracket1": {
+		"format": "「",
+		"tooltip": false
+	},
+
+	"custom/bottombracket1": {
+		"format": "」",
+		"tooltip": false
+	},
+
+
+
+	"custom/topbracket2": {
+		"format": "「",
+		"tooltip": false
+	},
+	"custom/bottombracket2": {
+		"format": "」",
+		"tooltip": false
+	},
+
+	"custom/topbracket3": {
+		"format": "「",
+		"tooltip": false
+	},
+	"custom/bottombracket3": {
+		"format": "」",
+		"tooltip": false
+	},
+
+	"custom/topbracket4": {
+		"format": "「",
+		"tooltip": false
+	},
+	"custom/bottombracket4": {
+		"format": "」",
+		"tooltip": false
+	},
+
+	"custom/topbracket5": {
+		"format": "「",
+		"tooltip": false
+	},
+
+	"custom/bottombracket5": {
+		"format": "」",
+		"tooltip": false
+	},
+
+	"custom/topbracket6": {
+		"format": "「",
+		"tooltip": false
+	},
+
+	"custom/bottombracket6": {
+		"format": "」",
+		"tooltip": false
+	},
+
+	"custom/topbracket7": {
+		"format": "「",
+		"tooltip": false
+	},
+	"custom/bottombracket7": {
+		"format": "」",
+		"tooltip": false
+	},
+
+	"custom/topbracket8": {
+		"format": "「",		
+		"tooltip": false
+	},
+	"custom/bottombracket8": {
+		"format": "」",
+		"tooltip": false
+	},
+	"custom/topbracket9": {
+		"format": "「",
+		"tooltip": false
+	},
+
+	"custom/bottombracket9": {
+		"format": "」",
+		"tooltip": false
+	},
+
+	"custom/topbracket10": {
+		"format": "」",
+		"tooltip": false
+	}
+}
+

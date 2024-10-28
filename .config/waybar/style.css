@@ -1,0 +1,327 @@
+/* Keyframes */
+
+@keyframes blink-critical {
+	to {
+		background-color: @critical;
+	}
+}
+
+/* Styles */
+
+/* Colors (Kanagawa) */
+@define-color black    #1f1f28;    /* Dark background */
+@define-color red      #e82424;    /* Red */
+@define-color green    #76946A;    /* Green */
+@define-color yellow   #FF9E3B;    /* Yellow */
+@define-color blue     #658594;    /* Blue */
+@define-color purple   #957fb8;    /* Purple */
+@define-color aqua     #6a9589;    /* Aqua/Cyan */
+@define-color gray     #717c7c;    /* Gray */
+@define-color brgray   #c8c093;    /* Bright Gray */
+@define-color brred    #e82424;    /* Bright Red */
+@define-color brgreen  #2B3328;    /* Bright Green */
+@define-color bryellow #FF9E3B;    /* Bright Yellow */
+@define-color brblue   #658594;     /* Bright Blue */
+@define-color brpurple #b8b4d0;   /* Bright Purple */
+@define-color braqua   #7AA89F;   /* Bright Aqua */
+@define-color white    #dcd7ba;    /* Light text */
+@define-color white2   #C8c093;
+@define-color bg2       #363646;    /* Slightly lighter background */
+@define-color pink     #D27E99;
+/* Specific Color Mappings for States */
+@define-color warning 	@bryellow; /* Warning color */
+@define-color critical	@red;      /* Critical color */
+@define-color mode	@black;      /* Mode color */
+@define-color unfocused	@bg2;      /* Unfocused color */
+@define-color focused	@braqua;    /* Focused color */
+@define-color inactive	@purple;    /* Inactive color */
+@define-color sound	@yellow;   /* Sound color */
+@define-color network	@aqua;    /* Network color */
+@define-color memory	@blue;    /* Memory color */
+@define-color cpu	@pink;      /* CPU color */
+@define-color temp	@brgreen;    /* Temperature color */
+@define-color layout	@bryellow;   /* Layout color */
+@define-color battery	@aqua;      /* Battery color */
+@define-color date	@white2;      /* Date color */
+@define-color time	@green;      /* Time color */
+@define-color tray	@black; 
+/* Reset all styles */
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	text-shadow: none;
+	icon-shadow: none;
+}
+
+/* The whole bar */
+#waybar {
+	background: @black; 
+	color: @white;
+	font-family: "CommitMonoNerdFont ", "CommitMonoNerdFont-Regular";
+	font-size: 10pt;
+	/*font-weight: bold;*/
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#language,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#backlight,
+#idle_inhibitor,
+#disk,
+#user,
+#mpris {
+	padding-left: 8pt;
+	padding-right: 8pt;
+}
+
+/* Each critical module */
+#mode,
+#memory.critical,
+#cpu.critical,
+#temperature.critical,
+#battery.critical.discharging {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-name: blink-critical;
+	animation-duration: 1s;
+}
+
+/* Each warning */
+#network.disconnected,
+#memory.warning,
+#cpu.warning,
+#temperature.warning,
+#battery.warning.discharging {
+	color: @warning;
+}
+
+/* And now modules themselves in their respective order */
+
+/* Current sway mode size: 11pt;
+	color: @network;
+	background: @sound;
+}
+
+#custom-topbracket9 {
+	font-size: 11pto;
+	color: @sound;
+	background: transparent;
+}
+
+#custom-topbracket10 {
+	font-size: 11pt;
+	color: @unfocused;
+	background: (resize etc) */
+#mode {
+	color: @white;
+	background: @mode;
+}
+
+/* Workspaces stuff */
+#workspaces button {
+	padding-left: 2pt;
+	padding-right: 2pt;
+	color: @white;
+}
+
+/* Inactive (on unfocused output) */
+#workspaces button.visible {
+	color: @white;
+}
+
+/* Active (on focused output) */
+#workspaces button.focused {
+	color: @focused;
+}
+
+/* Contains an urgent window */
+#workspaces button.urgent {
+	color: @red;
+}
+
+/* Style when cursor is on the button */
+#workspaces button:hover {
+	color: @sound;
+}
+
+#window {
+	margin-right: 35pt;
+	margin-left: 35pt;
+}
+
+#pulseaudio {
+	color: @white;
+	border-bottom: 2px solid @sound;
+	padding-bottom: 2px;
+}
+
+#network {
+	color: @white;
+	border-bottom: 2px solid @network;
+	padding-bottom: 2px;
+
+}
+
+
+#memory {
+	color: @white;
+	border-bottom: 2px solid @memory;
+	padding-bottom: 2px;
+}
+
+#cpu {
+	color: @white;
+	border-bottom: 2px solid @cpu;
+	padding-bottom: 2px;
+}
+
+#temperature {
+	background: @temp;
+	color: @black;
+}
+
+#language {
+	background: @layout;
+	color: @black;
+}
+
+#battery {
+	background: @battery;
+	color: @white;
+}
+
+#tray {
+	background: @tray;
+	color: @black;
+}
+
+#clock.date {
+	color: @white;
+        border-bottom: 2px solid @date;
+	padding-bottom: 2px;
+}
+
+#clock.time {
+	color: @white;
+	border-bottom: 2px solid @time;
+	padding-bottom: 2px;
+}
+
+
+#custom-topbracket1 {
+	font-size: 15pt;
+	color: @date;
+}
+
+#custom-bottombracket1 {
+	font-size: 15pt;
+	color: @date;
+}
+
+#custom-topbracket2 {
+	font-size: 15pt;
+	color: @time;
+}
+
+#custom-bottombracket2 {
+	font-size: 15pt;
+	color: @time;
+}
+
+#custom-topbracket3 {
+	font-size: 15pt;
+	color: @cpu;
+}
+
+#custom-bottombracket3 {
+	font-size: 15pt;
+	color: @cpu;
+}
+
+#custom-topbracket4 {
+	font-size: 15pt;
+	color: @memory;
+}
+
+#custom-bottombracket4 {
+	font-size: 15pt;
+	color: @memory;
+}
+
+#custom-topbracket5 {
+	font-size: 15pt;
+	color: @network;
+}
+
+#custom-bottombracket5 {
+	font-size: 15pt;
+	color: @network;
+}
+
+#custom-topbracket6 {
+	font-size: 15pt;
+	color: @sound;
+}
+
+#custom-bottombracket6 {
+	font-size: 15pt;
+	color: @sound;
+}
+
+#custom-topbracket7 {
+	font-size: 15pt;
+	color: @memory;
+}
+
+#custom-bottombracket7 {
+	font-size: 15pt;
+	color: @memory;
+}
+
+#custom-topbracket8 {
+	font-size: 15pt;
+	color: @network;
+}
+
+#custom-bottombracket8 {
+	font-size: 15pt;
+	color: @network;
+}
+
+#custom-topbracket9 {
+	font-size: 15pt;
+	color: @sound;
+	background: transparent;
+}
+
+#custom-bottombracket9 {
+	font-size: 15pt;
+	color: @sound;
+	background: transparent;
+}
+
+#custom-topbracket10 {
+	font-size: 15pt;
+	color: @unfocused;
+	background: transparent;
+}
+
+#custom-bottombracket10 {
+	font-size: 15pt;
+	color: @unfocused;
+	background: transparent;
+}
+
