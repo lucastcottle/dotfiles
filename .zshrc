@@ -53,7 +53,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 setopt autocd extendedglob nomatch notify
-bindkey -v
+bindkey '^ ' autosuggest-accept
 
 
 # Completion styling
