@@ -10,10 +10,11 @@
 		"custom/topbracket1",
 		"tray",
 		"custom/bottombracket1",
-		"custom/topbracket1",
-		"sway/window",
-		"custom/bottombracket1",
 	],
+
+	"modules-center": [
+		"sway/window",
+		],
 
 	"modules-right": [
 		"custom/topbracket6",

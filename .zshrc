@@ -29,7 +29,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
-
+zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
@@ -53,7 +53,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 setopt autocd extendedglob nomatch notify
-bindkey '^ ' autosuggest-accept
 
 
 # Completion styling
