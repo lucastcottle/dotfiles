@@ -4,12 +4,8 @@
 
 	"modules-left": [
 		"sway/mode",
-		"custom/topbracket1",
 		"sway/workspaces",
-		"custom/bottombracket1",
-		"custom/topbracket1",
-		"tray",
-		"custom/bottombracket1",
+		
 	],
 
 	"modules-center": [
@@ -17,24 +13,11 @@
 		],
 
 	"modules-right": [
-		"custom/topbracket6",
 		"pulseaudio",
-		"custom/bottombracket6",
-		"custom/topbracket5",
 		"network",
-		"custom/bottombracket5",
-		"custom/topbracket4",
-		"memory",
-		"custom/bottombracket4",
-		"custom/topbracket3",
-		"cpu",
-		"custom/bottombracket3",
-		"custom/topbracket2",
 		"clock#time",
-		"custom/bottombracket2",
-		"custom/topbracket1",
 		"clock#date",
-		"custom/bottombracket1",
+		"tray",
 	],
 
 	// Modules
