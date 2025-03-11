@@ -1,4 +1,6 @@
 
 //@theme "/home/lucas/.local/share/rofi/themes/kanagawa-sqaure.rasi"
 
-@theme "/home/lucas/.local/share/rofi/themes/everforest-square.rasi"
+//@theme "/home/lucas/.local/share/rofi/themes/everforest-square.rasi"
+
+@theme "/home/lucas/.local/share/rofi/themes/gruvbox.rasi"

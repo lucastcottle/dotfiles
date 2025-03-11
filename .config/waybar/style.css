@@ -9,26 +9,26 @@
 
 /* Styles */
 
-/* Colors (Everforest) */
-@define-color black    #272E33;    /* Dark background */
-@define-color red      #e67e80;    /* Red */
-@define-color green    #a7c080;    /* Green */
-@define-color yellow   #dbbc7f;    /* Yellow */
-@define-color blue     #7fbbb3;    /* Blue */
-@define-color purple   #d699b6;    /* Purple */
-@define-color aqua     #83c092;    /* Aqua/Cyan */
-@define-color gray     #868d80;    /* Gray */
-@define-color brgray   #d3c6aa;    /* Bright Gray */
-@define-color brred    #f85552;    /* Bright Red */
-@define-color brgreen  #5c6a72;    /* Bright Green */
-@define-color bryellow #f9bc41;    /* Bright Yellow */
-@define-color brblue   #7fbbb3;     /* Bright Blue */
-@define-color brpurple #d699b6;   /* Bright Purple */
-@define-color braqua   #a7c080;   /* Bright Aqua */
-@define-color white    #d3c6aa;    /* Light text */
-@define-color white2   #c4c1b1;
-@define-color bg2       #3a454a;    /* Slightly lighter background */
-@define-color pink     #d699b6;
+/* Colors (Gruvbox Variant) */
+@define-color black    #282828;    /* Dark background (bg0) */
+@define-color red      #fb4934;    /* Red */
+@define-color green    #8ec07c;    /* Green */
+@define-color yellow   #b8a100;    /* Yellow */
+@define-color blue     #83a598;    /* Blue */
+@define-color purple   #d3869b;    /* Purple */
+@define-color aqua     #8ec07c;    /* Aqua/Cyan */
+@define-color gray     #928374;    /* Gray */
+@define-color brgray   #ebdbb2;    /* Bright Gray */
+@define-color brred    #fb4934;    /* Bright Red */
+@define-color brgreen  #8ec07c;    /* Bright Green */
+@define-color bryellow #fabd2f;    /* Bright Yellow */
+@define-color brblue   #83a598;    /* Bright Blue */
+@define-color brpurple #d3869b;    /* Bright Purple */
+@define-color braqua   #8ec07c;    /* Bright Aqua */
+@define-color white    #ebdbb2;    /* Light text (fg2) */
+@define-color white2   #f2e5bc;    /* Lighter text */
+@define-color bg2      #3c3836;    /* Slightly lighter background (bg3) */
+@define-color pink     #d3869b;    /* Pink */
 /* Specific Color Mappings for States */
 @define-color warning 	@bryellow; /* Warning color */
 @define-color critical	@red;      /* Critical color */
