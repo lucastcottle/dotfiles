@@ -288,6 +288,21 @@ require('lazy').setup({
     },
   },
 
+  {
+    'mfussenegger/nvim-dap',
+    dependencies = {
+      'rcarriga/nvim-dap-ui',
+      'mfussenegger/nvim-dap-python',
+      'leoluz/nvim-dap-go',
+      'nvim-neotest/nvim-nio',
+    },
+    config = function()
+      require('dapui').setup()
+      require('dap-go').setup()
+      require('dap-python').setup 'python3'
+    end,
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle

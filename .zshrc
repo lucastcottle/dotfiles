@@ -35,7 +35,10 @@ zinit snippet OMZP::command-not-found
 zinit snippet OMZP::sudo
 zinit light Aloxaf/fzf-tab
 
+#restore vi mode
 bindkey -v  # Enables vi mode keybindings
+# add preview to fzf
+export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=numbers --line-range :500 {}' --preview-window=right:50%:wrap"
 
 
 # Replay cd if necessary
