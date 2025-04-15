@@ -1,0 +1,2 @@
+timeout 2700 'swaylock -f'
+
