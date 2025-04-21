@@ -13,6 +13,7 @@
 		],
 
 	"modules-right": [
+		"idle_inhibitor",
 		"pulseaudio",
 		"network",
 		"clock#time",
@@ -238,6 +239,15 @@
 	"custom/topbracket10": {
 		"format": "」",
 		"tooltip": false
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+		  "activated": "",
+		  "deactivated": ""
+		},
+		"tooltip": true,
+		"tooltip-format": "Idle Inhibitor: {status}"
 	}
 }
 
