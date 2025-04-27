@@ -40,9 +40,22 @@ bindkey -v  # Enables vi mode keybindings
 # add preview to fzf
 export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=numbers --line-range :500 {}' --preview-window=right:50%:wrap"
 
-
 # Replay cd if necessary
 zinit cdreplay -q
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+setopt autocd extendedglob nomatch notify
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

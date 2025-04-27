@@ -61,7 +61,7 @@
 #waybar {
 	background: @black; 
 	color: @white;
-	font-family: "CommitMonoNerdFont ", "CommitMonoNerdFont-Regular";
+	font-family: "CommitMonoNerdFont", "CommitMonoNerdFont-Regular";
 	font-size: 10pt;
 	/*font-weight: bold;*/
 }

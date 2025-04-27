@@ -13,12 +13,19 @@
 		],
 
 	"modules-right": [
+		"custom/topbracket1",
 		"idle_inhibitor",
+		"custom/topbracket1",
 		"pulseaudio",
+		"custom/topbracket1",
 		"network",
+		"custom/topbracket1",
 		"clock#time",
+		"custom/topbracket1",
 		"clock#date",
+		"custom/topbracket1",
 		"tray",
+		"custom/topbracket1",
 	],
 
 	// Modules
@@ -47,13 +54,13 @@
 
 	"clock#time": {
 		"interval": 10,
-		"format": "{:%H:%M}",
+		"format": " {:%H:%M}",
 		"tooltip": false
 	},
 
 	"clock#date": {
 		"interval": 20,
-		"format": "{:%e %b %Y}",
+		"format": " {:%e %b %Y}",
 		"tooltip": false
 		//"tooltip-format": "{:%e %B %Y}"
 	},
@@ -88,10 +95,10 @@
 
 	"network": {
 		"interval": 5,
-		"format-wifi": " {essid} ({signalStrength}%)",
-		"format-ethernet": " {ifname}",
+		"format-wifi": "  {essid} ({signalStrength}%)",
+		"format-ethernet": "󰈀 {ifname}",
 		"format-disconnected": "No connection",
-		"format-alt": " {ipaddr}/{cidr}",
+		"format-alt": "󰩟 {ipaddr}/{cidr}",
 		"tooltip": false
 	},
 
@@ -151,100 +158,100 @@
 	},
 
 	"custom/topbracket1": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/bottombracket1": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 
 
 	"custom/topbracket2": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 	"custom/bottombracket2": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/topbracket3": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 	"custom/bottombracket3": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/topbracket4": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 	"custom/bottombracket4": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/topbracket5": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/bottombracket5": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/topbracket6": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/bottombracket6": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/topbracket7": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 	"custom/bottombracket7": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/topbracket8": {
-		"format": "「",		
+		"format": "|",		
 		"tooltip": false
 	},
 	"custom/bottombracket8": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 	"custom/topbracket9": {
-		"format": "「",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/bottombracket9": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 
 	"custom/topbracket10": {
-		"format": "」",
+		"format": "|",
 		"tooltip": false
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
-		  "activated": "",
-		  "deactivated": ""
+		  "activated": "󰒳",
+		  "deactivated": "󰒲"
 		},
 		"tooltip": true,
 		"tooltip-format": "Idle Inhibitor: {status}"
