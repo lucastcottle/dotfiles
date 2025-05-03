@@ -1,0 +1,195 @@
+* {
+    font-family: "CommitMonoNerdFont", "CommitMonoNerdFont-Regular";    
+    font-size: 13px;
+}
+
+@define-color inactive_module_color #a9a9a9;
+
+window#waybar {
+    background-color: rgba(40, 40, 40, 0.9);
+    border-color: rgba(146, 131, 116, 0.5);
+    border-style: solid;
+    color: #ebdbb2;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar:not(.bottom):not(.left):not(.right) {
+    border-bottom-width: 2px;
+}
+
+window#waybar.bottom {
+    border-top-width: 2px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    all: unset;
+    min-height: 24px;
+    min-width: 16px;
+    padding: 0 10px;
+    transition: none;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: none;
+}
+
+/* Remove underline box-shadow for modules */
+.modules-left > widget > label,
+.modules-center > widget > label,
+.modules-right > widget > label {
+    color: inherit;
+    margin: 0;
+    padding: 0 10px;
+    box-shadow: none;
+}
+
+.modules-left > widget > box,
+.modules-center > widget > box,
+.modules-right > widget > box {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.modules-left > widget:first-child > box {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.modules-right > widget:last-child > box {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+window#waybar #window {
+    box-shadow: none;
+}
+
+/* Workspaces — no hover, no box-shadow, no custom colors */
+#workspaces button {
+    background-color: #504945;
+    color: inherit;
+}
+
+#workspaces button:hover {
+    background-color: #504945;
+    box-shadow: none;
+}
+
+#workspaces button.focused {
+    background-color: #458588;
+}
+
+#workspaces button.urgent {
+    background-color: #cc241d;
+}
+
+/* Mode indicator (optional: can simplify this too) */
+#mode {
+    background-color: #458588;
+    color: #fbf1c7;
+    box-shadow: none;
+}
+
+window#waybar.bottom #mode,
+window#waybar:not(.bottom):not(.left):not(.right) #mode {
+    box-shadow: none;
+}
+
+#image {
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Battery warnings */
+#battery.charging,
+#battery.plugged {
+    color: inherit;
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Muted modules */
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted,
+#idle_inhibitor,
+#mpd.disconnected,
+#mpd.paused,
+#mpd.stopped {
+    color: @inactive_module_color;
+}
+
+#idle_inhibitor.activated {
+    color: inherit;
+}
+
+/* Tray */
+#tray {
+    padding: 0 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    animation-name: needs-attention;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: transparent;
+}
+
+@keyframes needs-attention {
+    to {
+        background-color: rgba(235, 77, 75, 0.5);
+    }
+}
+
+/* Input modules */
+#language,
+#keyboard-state {
+    min-width: 16px;
+    color: inherit;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Scratchpad */
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+

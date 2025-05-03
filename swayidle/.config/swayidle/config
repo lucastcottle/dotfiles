@@ -1,1 +1,0 @@
-timeout 2700 'sh -c "swaylock -f"'

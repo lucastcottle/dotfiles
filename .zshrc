@@ -70,7 +70,7 @@ alias vim='nvim'
 alias c='clear'
 
 # Powerlevel10k Theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.local/share/zinit/plugins/romkatv---powerlevel10k/powerlevel10k.zsh-theme
 
 # Add zoxide to path
 export PATH="$HOME/.local/bin:$PATH"
