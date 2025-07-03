@@ -16,6 +16,7 @@
     ],
     "modules-right": [
         "idle_inhibitor",
+        "custom/gammastep",
         "power-profiles-daemon",
         "pulseaudio",
         "network",
@@ -45,6 +46,14 @@
             "deactivated": ""
         }
     },
+    "custom/gammastep": {
+        "exec": "~/.config/waybar/gammastep-status.sh",
+        "interval": 5,
+        "on-click": "~/.config/waybar/gammastep-toggle.sh",
+        "return-type": "json",
+        "tooltip": true
+    },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 5

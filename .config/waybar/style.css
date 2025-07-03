@@ -7,7 +7,7 @@
 
 window#waybar {
     background-color: rgba(40, 40, 40, 0.9);
-    border-color: rgba(146, 131, 116, 0.5);
+    border-color: rgba(235, 219, 178, 0.5);
     border-style: solid;
     color: #ebdbb2;
     transition-property: background-color;
@@ -28,6 +28,8 @@ window#waybar.hidden {
 
 button {
     all: unset;
+    border-color: rgba(235, 219, 178, 0.5);
+    border-style: solid;
     min-height: 24px;
     min-width: 16px;
     padding: 0 10px;
@@ -74,20 +76,28 @@ window#waybar #window {
 /* Workspaces — no hover, no box-shadow, no custom colors */
 #workspaces button {
     background-color: #504945;
-    color: inherit;
+    border: none;
+    border-bottom: 2px solid rgba(235, 219, 178, 0.5); /* Bottom border only */
+    padding: 0 10px;
+    min-height: 24px;
+    min-width: 16px;
 }
 
+
 #workspaces button:hover {
-    background-color: #504945;
+    background-color: #928374;
     box-shadow: none;
 }
 
+
 #workspaces button.focused {
     background-color: #458588;
+    border-bottom: 2px solid rgba(235, 219, 178, 0.5);
 }
 
 #workspaces button.urgent {
     background-color: #cc241d;
+    border-bottom: 2px solid rgba(235, 219, 178, 0.5); /* Bottom border only */
 }
 
 /* Mode indicator (optional: can simplify this too) */
@@ -134,6 +144,7 @@ window#waybar:not(.bottom):not(.left):not(.right) #mode {
 #pulseaudio.muted,
 #wireplumber.muted,
 #idle_inhibitor,
+#custom-gammastep,
 #mpd.disconnected,
 #mpd.paused,
 #mpd.stopped {
@@ -141,6 +152,10 @@ window#waybar:not(.bottom):not(.left):not(.right) #mode {
 }
 
 #idle_inhibitor.activated {
+    color: inherit;
+}
+
+#custom-gammastep.active {
     color: inherit;
 }
 
