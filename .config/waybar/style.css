@@ -1,15 +1,15 @@
 * {
-    font-family: "CommitMonoNerdFont", "CommitMonoNerdFont-Regular";    
+    font-family: "CommitMonoNerdFont", "CommitMonoNerdFont-Regular";
     font-size: 13px;
 }
 
-@define-color inactive_module_color #a9a9a9;
+@define-color inactive_module_color #727272;
 
 window#waybar {
-    background-color: rgba(40, 40, 40, 0.9);
-    border-color: rgba(235, 219, 178, 0.5);
+    background-color: rgba(21, 21, 21, 0.9);
+    border-color: rgba(114, 114, 114, 0.5);
     border-style: solid;
-    color: #ebdbb2;
+    color: #E1E1E1;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -28,7 +28,7 @@ window#waybar.hidden {
 
 button {
     all: unset;
-    border-color: rgba(235, 219, 178, 0.5);
+    border-color: rgba(114, 114, 114, 0.5);
     border-style: solid;
     min-height: 24px;
     min-width: 16px;
@@ -41,7 +41,6 @@ button:hover {
     box-shadow: none;
 }
 
-/* Remove underline box-shadow for modules */
 .modules-left > widget > label,
 .modules-center > widget > label,
 .modules-right > widget > label {
@@ -73,37 +72,36 @@ window#waybar #window {
     box-shadow: none;
 }
 
-/* Workspaces — no hover, no box-shadow, no custom colors */
+/* Workspaces */
 #workspaces button {
-    background-color: #504945;
+    background-color: #202020;
     border: none;
-    border-bottom: 2px solid rgba(235, 219, 178, 0.5); /* Bottom border only */
+    border-bottom: 2px solid rgba(114, 114, 114, 0.5);
     padding: 0 10px;
     min-height: 24px;
     min-width: 16px;
 }
 
-
 #workspaces button:hover {
-    background-color: #928374;
+    background-color: #373737;
     box-shadow: none;
 }
 
-
 #workspaces button.focused {
-    background-color: #458588;
-    border-bottom: 2px solid rgba(235, 219, 178, 0.5);
+    background-color: #BAD7FF;
+    color: #151515;
+    border-bottom: 2px solid rgba(114, 114, 114, 0.5);
 }
 
 #workspaces button.urgent {
-    background-color: #cc241d;
-    border-bottom: 2px solid rgba(235, 219, 178, 0.5); /* Bottom border only */
+    background-color: #b46958;
+    border-bottom: 2px solid rgba(114, 114, 114, 0.5);
 }
 
-/* Mode indicator (optional: can simplify this too) */
+/* Mode indicator */
 #mode {
-    background-color: #458588;
-    color: #fbf1c7;
+    background-color: #88afa2;
+    color: #151515;
     box-shadow: none;
 }
 
@@ -124,7 +122,7 @@ window#waybar:not(.bottom):not(.left):not(.right) #mode {
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
+    color: #984936;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -134,8 +132,8 @@ window#waybar:not(.bottom):not(.left):not(.right) #mode {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #E1E1E1;
+        color: #151515;
     }
 }
 
@@ -180,7 +178,7 @@ window#waybar:not(.bottom):not(.left):not(.right) #mode {
 
 @keyframes needs-attention {
     to {
-        background-color: rgba(235, 77, 75, 0.5);
+        background-color: rgba(180, 105, 88, 0.4);
     }
 }
 
