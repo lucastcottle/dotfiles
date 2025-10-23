@@ -24,6 +24,14 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+# ---- UI color configuration ----
+# Autosuggestions (ghost text as you type)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#AFAFAF'
+
+# fzf-tab: visual consistency with dark palette
+zstyle ':fzf-tab:*' preview-window 'right:50%:wrap'
+zstyle ':fzf-tab:*' fzf-flags \
+  '--color=bg+:#202020,fg+:#E1E1E1,hl+:#BAD7FF,fg:#AFAFAF,bg:#151515,hl:#BAD7FF,pointer:#BAD7FF,border:#373737,prompt:#90A959,marker:#F4BF75'
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-completions
@@ -61,6 +69,8 @@ setopt autocd extendedglob nomatch notify
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
+zstyle ':completion:*:default' list-colors \
+  "ma=48;2;32;32;32;38;2;225;225;225"
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
