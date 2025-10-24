@@ -26,7 +26,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 # ---- UI color configuration ----
 # Autosuggestions (ghost text as you type)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#AFAFAF'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#727272'
 
 # fzf-tab: visual consistency with dark palette
 zstyle ':fzf-tab:*' preview-window 'right:50%:wrap'
