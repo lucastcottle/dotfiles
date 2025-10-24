@@ -72,9 +72,10 @@ window#waybar #window {
     box-shadow: none;
 }
 
-/* Workspaces */
+/* Workspaces - Monochrome style */
 #workspaces button {
     background-color: #202020;
+    color: #E1E1E1;
     border: none;
     border-bottom: 2px solid rgba(114, 114, 114, 0.5);
     padding: 0 10px;
@@ -84,43 +85,26 @@ window#waybar #window {
 
 #workspaces button:hover {
     background-color: #373737;
-    box-shadow: none;
 }
 
 #workspaces button.focused {
-    background-color: #BAD7FF;
+    background-color: #E1E1E1;
     color: #151515;
-    border-bottom: 2px solid rgba(114, 114, 114, 0.5);
+    border-bottom: 2px solid #AFAFAF;
 }
 
 #workspaces button.urgent {
     background-color: #b46958;
-    border-bottom: 2px solid rgba(114, 114, 114, 0.5);
+    color: #FFFFFF;
 }
 
-/* Mode indicator */
+/* Mode indicator - colored for visibility */
 #mode {
     background-color: #88afa2;
     color: #151515;
-    box-shadow: none;
-}
-
-window#waybar.bottom #mode,
-window#waybar:not(.bottom):not(.left):not(.right) #mode {
-    box-shadow: none;
-}
-
-#image {
-    margin: 0;
-    padding: 0 10px;
 }
 
 /* Battery warnings */
-#battery.charging,
-#battery.plugged {
-    color: inherit;
-}
-
 #battery.critical:not(.charging) {
     color: #984936;
     animation-name: blink;
@@ -137,7 +121,7 @@ window#waybar:not(.bottom):not(.left):not(.right) #mode {
     }
 }
 
-/* Muted modules */
+/* Muted / inactive modules */
 #network.disconnected,
 #pulseaudio.muted,
 #wireplumber.muted,
@@ -149,10 +133,7 @@ window#waybar:not(.bottom):not(.left):not(.right) #mode {
     color: @inactive_module_color;
 }
 
-#idle_inhibitor.activated {
-    color: inherit;
-}
-
+#idle_inhibitor.activated,
 #custom-gammastep.active {
     color: inherit;
 }
