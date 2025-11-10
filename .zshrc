@@ -86,6 +86,8 @@ source ~/.local/share/zinit/plugins/romkatv---powerlevel10k/powerlevel10k.zsh-th
 export PATH="$HOME/.local/bin:$PATH"
 #Set colours for tmux 
 export TERM=screen-256color
+#go bin in path/
+export PATH="$HOME/go/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
