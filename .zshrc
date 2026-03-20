@@ -97,3 +97,10 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 
+# Gemini CLI
+export GOOGLE_CLOUD_PROJECT="gemini-enterpise-490500"
+# Added by Antigravity
+export PATH="/Users/lucascottle/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/lucascottle/.antigravity/antigravity/bin:$PATH"
