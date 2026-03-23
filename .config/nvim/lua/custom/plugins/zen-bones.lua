@@ -10,6 +10,6 @@ return {
   config = function()
     vim.o.termguicolors = true
     vim.o.background = 'dark'
-    vim.cmd [[colorscheme zenwritten]] -- use the variant “zenwritten”
+    -- vim.cmd [[colorscheme zenwritten]] -- use the variant "zenwritten"
   end,
 }

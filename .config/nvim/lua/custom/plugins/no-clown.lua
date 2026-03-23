@@ -15,5 +15,6 @@ return {
         match_paren = { underline = true },
       },
     }
+    vim.cmd.colorscheme 'no-clown-fiesta'
   end,
 }
