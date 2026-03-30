@@ -1,0 +1,86 @@
+# ── Layout ────────────────────────────────────────────────────────────────────
+
+format = "$directory$git_branch$git_status$nodejs$python$rust$golang$package$cmd_duration$character"
+
+# ── Directory ─────────────────────────────────────────────────────────────────
+
+[directory]
+style = "fg:#BAD7FF"
+truncation_length = 3
+truncate_to_repo = true
+truncation_symbol = "…/"
+format = "[$path]($style) "
+
+# ── Git ───────────────────────────────────────────────────────────────────────
+
+[git_branch]
+symbol = ""
+style = "fg:#727272"
+format = "[$symbol $branch]($style)"
+
+[git_status]
+style = "fg:#727272"
+format = "([ $all_status$ahead_behind]($style)) "
+conflicted = "!"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇡${ahead_count}⇣${behind_count}"
+untracked = "?"
+stashed = "≡"
+modified = "~"
+staged = "+"
+renamed = "»"
+deleted = "-"
+
+# ── Command duration ──────────────────────────────────────────────────────────
+
+[cmd_duration]
+min_time = 2_000
+style = "fg:#727272"
+format = "[${duration}]($style) "
+
+# ── Fill ──────────────────────────────────────────────────────────────────────
+
+[fill]
+symbol = " "
+
+# ── Exit status ───────────────────────────────────────────────────────────────
+
+[status]
+disabled = false
+style = "fg:#b46958"
+format = "[$status]($style) "
+map_symbol = false
+
+# ── Prompt character ──────────────────────────────────────────────────────────
+
+[character]
+success_symbol = "[>](fg:#727272)"
+error_symbol = "[>](fg:#b46958)"
+
+# ── Language versions ─────────────────────────────────────────────────────────
+
+[nodejs]
+symbol = "󰎙 "
+style = "fg:#90A959"
+format = "[$symbol$version]($style) "
+
+[python]
+symbol = " "
+style = "fg:#F4BF75"
+format = "[$symbol$version]($style) "
+
+[rust]
+symbol = " "
+style = "fg:#FFA557"
+format = "[$symbol$version]($style) "
+
+[golang]
+symbol = " "
+style = "fg:#88afa2"
+format = "[$symbol$version]($style) "
+
+[package]
+symbol = "󰏗 "
+style = "fg:#727272"
+format = "[$symbol$version]($style) "
