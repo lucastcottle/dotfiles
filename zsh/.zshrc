@@ -1,8 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Check if we're on macOS and if so add homebrew to path
 if [[ "$(uname)" == "Darwin" ]] && [[ -f "/opt/homebrew/bin/brew" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -22,8 +17,6 @@ autoload -Uz compinit && compinit
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 # ---- UI color configuration ----
 # Autosuggestions (ghost text as you type)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#727272'
@@ -79,9 +72,6 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 
-# Powerlevel10k Theme
-source ~/.local/share/zinit/plugins/romkatv---powerlevel10k/powerlevel10k.zsh-theme
-
 # Add zoxide to path
 export PATH="$HOME/.local/bin:$PATH"
 #Set colours for tmux 
@@ -89,12 +79,10 @@ export TERM=screen-256color
 #go bin in path/
 export PATH="$HOME/go/bin:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(starship init zsh)"
 
 
 # Gemini CLI
