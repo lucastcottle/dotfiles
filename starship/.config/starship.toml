@@ -55,8 +55,8 @@ map_symbol = false
 # ── Prompt character ──────────────────────────────────────────────────────────
 
 [character]
-success_symbol = "[>](fg:#727272)"
-error_symbol = "[>](fg:#b46958)"
+success_symbol = "[➜](fg:#727272)"
+error_symbol = "[➜](fg:#b46958)"
 
 # ── Language versions ─────────────────────────────────────────────────────────
 
