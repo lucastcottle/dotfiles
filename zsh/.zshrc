@@ -92,3 +92,6 @@ export PATH="/Users/lucascottle/.antigravity/antigravity/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/lucascottle/.antigravity/antigravity/bin:$PATH"
+export GOOGLE_CLOUD_PROJECT="gemini-enterpise-490500"
+export GEMINI_DEFAULT_AUTH_TYPE="oauth-personal"
+export GOOGLE_GENAI_USE_GCA=true
