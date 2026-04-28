@@ -85,10 +85,7 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 
-# Gemini CLI
-export GOOGLE_CLOUD_PROJECT="gemini-enterpise-490500"
-# Added by Antigravity
-export PATH="/Users/lucascottle/.antigravity/antigravity/bin:$PATH"
-
-# Added by Antigravity
-export PATH="/Users/lucascottle/.antigravity/antigravity/bin:$PATH"
+# macOS-only machine-local settings (keep this file out of git)
+if [[ "$(uname)" == "Darwin" ]] && [[ -f "$HOME/.zshrc.local" ]]; then
+  source "$HOME/.zshrc.local"
+fi
