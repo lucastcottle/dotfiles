@@ -74,8 +74,6 @@ alias c='clear'
 
 # Add zoxide to path
 export PATH="$HOME/.local/bin:$PATH"
-#Set colours for tmux 
-export TERM=screen-256color
 #go bin in path/
 export PATH="$HOME/go/bin:$PATH"
 
@@ -89,3 +87,7 @@ eval "$(starship init zsh)"
 if [[ "$(uname)" == "Darwin" ]] && [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
 fi
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/lucascottle/.local/bin:$PATH"
