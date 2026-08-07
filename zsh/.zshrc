@@ -76,6 +76,7 @@ alias c='clear'
 export PATH="$HOME/.local/bin:$PATH"
 #go bin in path/
 export PATH="$HOME/go/bin:$PATH"
+unset GOPATH
 
 # Shell integrations
 eval "$(fzf --zsh)"
