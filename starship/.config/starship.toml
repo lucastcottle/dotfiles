@@ -1,6 +1,6 @@
 # ── Layout ────────────────────────────────────────────────────────────────────
 
-format = "$directory$git_branch$git_status$nodejs$python$rust$golang$package$cmd_duration$character"
+format = "$directory$git_branch$git_status$kubernetes$gcloud$nodejs$python$rust$golang$package$cmd_duration$character"
 
 # ── Directory ─────────────────────────────────────────────────────────────────
 
@@ -66,17 +66,17 @@ style = "fg:#90A959"
 format = "[$symbol$version]($style) "
 
 [python]
-symbol = " "
+symbol = ""
 style = "fg:#F4BF75"
 format = "[$symbol$version]($style) "
 
 [rust]
-symbol = " "
+symbol = ""
 style = "fg:#FFA557"
 format = "[$symbol$version]($style) "
 
 [golang]
-symbol = " "
+symbol = ""
 style = "fg:#88afa2"
 format = "[$symbol$version]($style) "
 
@@ -84,3 +84,20 @@ format = "[$symbol$version]($style) "
 symbol = "󰏗 "
 style = "fg:#727272"
 format = "[$symbol$version]($style) "
+
+# ── GCP ─────────────────────────────────────────────────────────────────────
+
+[gcloud]
+disabled = false
+style = "fg:#BAD7FF"
+symbol = "󱇶 "
+format = '[$symbol$project]($style) '
+
+# ── Kubernetes ──────────────────────────────────────────────────────────────
+
+[kubernetes]
+disabled = false
+style = "fg:#BAD7FF"
+symbol = "☸ "
+format = '[$symbol$context( \($namespace\))]($style) '
+detect_folders = ['.']
