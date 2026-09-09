@@ -164,6 +164,16 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- Detect Helm chart templates as the `helm` filetype (treesitter has a helm parser).
+-- Without this, `.tpl` is detected as smarty and chart yaml as plain yaml.
+vim.filetype.add {
+  pattern = {
+    ['.*/templates/.*%.tpl'] = 'helm',
+    ['.*/templates/.*%.ya?ml'] = 'helm',
+    ['helmfile.*%.ya?ml'] = 'helm',
+  },
+}
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
