@@ -1,0 +1,137 @@
+# -----------------------------------------------------------------------------
+# luna skin
+# A minimal, near-black theme for k9s.
+# -----------------------------------------------------------------------------
+
+# Styles...
+foreground: &foreground "#e4e4e8"
+background: &background "#060606"
+current_line: &current_line "#212121"
+selection: &selection "#384048"
+comment: &comment "#7c7c7c"
+grey: &grey "#888888"
+silver: &silver "#c7c7c7"
+border: &border "#404040"
+orange: &orange "#e19067"
+blue: &blue "#75a1c7"
+purple: &purple "#c4a8d6"
+green: &green "#9eb38e"
+signal: &signal "#c2916a"
+red: &red "#e08585"
+yellow: &yellow "#d9a35a"
+info: &info "#8c9cb8"
+ok: &ok "#6fbe80"
+
+# Skin...
+k9s:
+  # General K9s styles
+  body:
+    fgColor: *foreground
+    bgColor: *background
+    logoColor: *blue
+  # Command prompt styles
+  prompt:
+    fgColor: *foreground
+    bgColor: *background
+    suggestColor: *grey
+  # ClusterInfoView styles.
+  info:
+    fgColor: *info
+    sectionColor: *grey
+  # Dialog styles.
+  dialog:
+    fgColor: *foreground
+    bgColor: *background
+    buttonFgColor: *foreground
+    buttonBgColor: *grey
+    buttonFocusFgColor: *background
+    buttonFocusBgColor: *blue
+    labelFgColor: *orange
+    fieldFgColor: *foreground
+  # Help styles.
+  help:
+    fgColor: *foreground
+    bgColor: *background
+    keyColor: *orange
+    numKeyColor: *blue
+    sectionColor: *purple
+  frame:
+    # Borders styles.
+    border:
+      fgColor: *border
+      focusColor: *blue
+    menu:
+      fgColor: *grey
+      keyColor: *orange
+      numKeyColor: *blue
+    # CrumbView attributes for history navigation.
+    crumbs:
+      fgColor: *background
+      bgColor: *grey
+      activeColor: *orange
+    # Resource status and update styles
+    status:
+      newColor: *info
+      modifyColor: *yellow
+      addColor: *ok
+      pendingColor: *signal
+      errorColor: *red
+      highlightColor: *signal
+      killColor: *red
+      completedColor: *comment
+    # Border title styles.
+    title:
+      fgColor: *foreground
+      bgColor: *background
+      highlightColor: *orange
+      counterColor: *blue
+      filterColor: *signal
+  views:
+    # Charts skins...
+    charts:
+      bgColor: *background
+      defaultDialColors:
+        - *ok
+        - *red
+      defaultChartColors:
+        - *blue
+        - *purple
+    # TableView attributes.
+    table:
+      fgColor: *foreground
+      bgColor: *background
+      cursorFgColor: *background
+      cursorBgColor: *current_line
+      markColor: *orange
+      # Header row styles.
+      header:
+        fgColor: *orange
+        bgColor: *background
+        sorterColor: *blue
+    # Xray view attributes.
+    xray:
+      fgColor: *foreground
+      bgColor: *background
+      cursorColor: *current_line
+      graphicColor: *blue
+      showIcons: false
+    # YAML info styles.
+    yaml:
+      keyColor: *orange
+      colonColor: *grey
+      valueColor: *green
+    # Logs styles.
+    logs:
+      fgColor: *foreground
+      bgColor: *background
+      indicator:
+        fgColor: *foreground
+        bgColor: *background
+        toggleOnColor: *ok
+        toggleOffColor: *grey
+    # Help styles.
+    help:
+      fgColor: *grey
+      bgColor: *background
+      indicator:
+        fgColor: *blue

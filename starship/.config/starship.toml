@@ -1,3 +1,26 @@
+# ── Palette ───────────────────────────────────────────────────────────────────
+# luna: https://github.com/wtfox/luna.nvim
+
+palette = "luna"
+
+[palettes.luna]
+black = "#000000"
+red = "#e08585"
+green = "#6fbe80"
+yellow = "#c2916a"
+blue = "#75a1c7"
+purple = "#c4a8d6"
+cyan = "#75a1c7"
+white = "#c7c7c7"
+bright-black = "#888888"
+bright-red = "#e08585"
+bright-green = "#6fbe80"
+bright-yellow = "#d9a35a"
+bright-blue = "#8c9cb8"
+bright-purple = "#c4a8d6"
+bright-cyan = "#75a1c7"
+bright-white = "#ffffff"
+
 # ── Layout ────────────────────────────────────────────────────────────────────
 
 format = "$directory$git_branch$git_status$kubernetes$gcloud$nodejs$python$rust$golang$package$cmd_duration$character"
@@ -5,7 +28,7 @@ format = "$directory$git_branch$git_status$kubernetes$gcloud$nodejs$python$rust$
 # ── Directory ─────────────────────────────────────────────────────────────────
 
 [directory]
-style = "fg:#BAD7FF"
+style = "fg:blue"
 truncation_length = 3
 truncate_to_repo = true
 truncation_symbol = "…/"
@@ -15,11 +38,11 @@ format = "[$path]($style) "
 
 [git_branch]
 symbol = ""
-style = "fg:#727272"
+style = "fg:bright-black"
 format = "[$symbol $branch]($style)"
 
 [git_status]
-style = "fg:#727272"
+style = "fg:bright-black"
 format = "([ $all_status$ahead_behind]($style)) "
 conflicted = "!${count}"
 ahead = "⇡${count}"
@@ -36,7 +59,7 @@ deleted = "-${count}"
 
 [cmd_duration]
 min_time = 2_000
-style = "fg:#727272"
+style = "fg:bright-black"
 format = "[${duration}]($style) "
 
 # ── Fill ──────────────────────────────────────────────────────────────────────
@@ -48,48 +71,48 @@ symbol = " "
 
 [status]
 disabled = false
-style = "fg:#b46958"
+style = "fg:red"
 format = "[$status]($style) "
 map_symbol = false
 
 # ── Prompt character ──────────────────────────────────────────────────────────
 
 [character]
-success_symbol = "[❯](fg:#90A959)"
-error_symbol = "[❯](fg:#b46958)"
+success_symbol = "[❯](fg:green)"
+error_symbol = "[❯](fg:red)"
 
 # ── Language versions ─────────────────────────────────────────────────────────
 
 [nodejs]
 symbol = "󰎙 "
-style = "fg:#90A959"
+style = "fg:green"
 format = "[$symbol$version]($style) "
 
 [python]
-symbol = ""
-style = "fg:#F4BF75"
+symbol = ""
+style = "fg:yellow"
 format = "[$symbol$version]($style) "
 
 [rust]
-symbol = ""
-style = "fg:#FFA557"
+symbol = ""
+style = "fg:bright-yellow"
 format = "[$symbol$version]($style) "
 
 [golang]
-symbol = ""
-style = "fg:#88afa2"
+symbol = ""
+style = "fg:cyan"
 format = "[$symbol$version]($style) "
 
 [package]
 symbol = "󰏗 "
-style = "fg:#727272"
+style = "fg:bright-black"
 format = "[$symbol$version]($style) "
 
 # ── GCP ─────────────────────────────────────────────────────────────────────
 
 [gcloud]
 disabled = false
-style = "fg:#BAD7FF"
+style = "fg:blue"
 symbol = "󱇶 "
 format = '[$symbol$project]($style) '
 
@@ -97,7 +120,7 @@ format = '[$symbol$project]($style) '
 
 [kubernetes]
 disabled = false
-style = "fg:#BAD7FF"
+style = "fg:blue"
 symbol = "☸ "
 format = '[$symbol$context( \($namespace\))]($style) '
 detect_folders = ['.']
