@@ -3,18 +3,17 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  'aktersnurra/no-clown-fiesta.nvim',
+  "wtfox/luna.nvim",
   priority = 1000, -- Load colorscheme early
   config = function()
-    require('no-clown-fiesta').setup {
+    require('luna').setup {
       -- your options here, e.g.:
-      theme = 'dark',
-      styles = {
-        type = { bold = true },
-        lsp = { underline = false },
-        match_paren = { underline = true },
+      transparent = false,
+      accent = 1.0,
+      plugins ={
+        auto=true
       },
     }
-    -- vim.cmd.colorscheme 'no-clown-fiesta'
+    vim.cmd.colorscheme("luna")
   end,
 }
