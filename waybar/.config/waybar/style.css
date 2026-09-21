@@ -3,12 +3,13 @@
     font-size: 13px;
 }
 
-@define-color inactive_module_color #7C7C7C;
+@define-color inactive_module_color @luna_comment;
 
 @define-color luna_bg #060606;
 @define-color luna_bg_alt #1C1C1C;
 @define-color luna_bg_soft #1F1F1F;
 @define-color luna_surface #333333;
+@define-color luna_selection #384048;
 @define-color luna_border #404040;
 @define-color luna_comment #7C7C7C;
 @define-color luna_grey #888888;
@@ -26,12 +27,14 @@
 @define-color luna_func #75A1C7;
 @define-color luna_type #C4A8D6;
 @define-color luna_string #9EB38E;
+@define-color luna_black #000000;
+@define-color luna_white #FFFFFF;
 
 window#waybar {
-    background-color: rgba(6, 6, 6, 0.9);
-    border-color: rgba(64, 64, 64, 0.5);
+    background-color: alpha(@luna_bg, 0.9);
+    border-color: alpha(@luna_border, 0.5);
     border-style: solid;
-    color: #E4E4E8;
+    color: @luna_fg;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -50,7 +53,7 @@ window#waybar.hidden {
 
 button {
     all: unset;
-    border-color: rgba(64, 64, 64, 0.5);
+    border-color: alpha(@luna_border, 0.5);
     border-style: solid;
     min-height: 24px;
     min-width: 16px;
@@ -96,39 +99,39 @@ window#waybar #window {
 
 /* Workspaces - Luna style */
 #workspaces button {
-    background-color: #1C1C1C;
-    color: #E4E4E8;
+    background-color: @luna_bg_alt;
+    color: @luna_fg;
     border: none;
-    border-bottom: 2px solid rgba(64, 64, 64, 0.5);
+    border-bottom: 2px solid alpha(@luna_border, 0.5);
     padding: 0 10px;
     min-height: 24px;
     min-width: 16px;
 }
 
 #workspaces button:hover {
-    background-color: #384048;
+    background-color: @luna_selection;
 }
 
 #workspaces button.focused {
-    background-color: #E4E4E8;
-    color: #060606;
-    border-bottom: 2px solid #C7C7C7;
+    background-color: @luna_fg;
+    color: @luna_bg;
+    border-bottom: 2px solid @luna_silver;
 }
 
 #workspaces button.urgent {
-    background-color: #E08585;
-    color: #060606;
+    background-color: @luna_signal;
+    color: @luna_bg;
 }
 
 /* Mode indicator - signal color for visibility */
 #mode {
-    background-color: #C2916A;
-    color: #060606;
+    background-color: @luna_signal;
+    color: @luna_bg;
 }
 
 /* Battery warnings */
 #battery.critical:not(.charging) {
-    color: #E08585;
+    color: @luna_error;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -138,8 +141,8 @@ window#waybar #window {
 
 @keyframes blink {
     to {
-        background-color: #E4E4E8;
-        color: #060606;
+        background-color: @luna_fg;
+        color: @luna_bg;
     }
 }
 
@@ -181,7 +184,7 @@ window#waybar #window {
 
 @keyframes needs-attention {
     to {
-        background-color: rgba(224, 133, 133, 0.4);
+        background-color: alpha(@luna_error, 0.4);
     }
 }
 
@@ -197,12 +200,12 @@ window#waybar #window {
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+    background: alpha(@luna_black, 0.2);
 }
 
 /* Scratchpad */
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    background: alpha(@luna_black, 0.2);
 }
 
 #scratchpad.empty {

@@ -6,6 +6,7 @@ palette = "luna"
 [palettes.luna]
 black = "#000000"
 red = "#e08585"
+orange = "#e19067"
 green = "#6fbe80"
 yellow = "#c2916a"
 blue = "#75a1c7"
@@ -23,12 +24,18 @@ bright-white = "#ffffff"
 
 # ── Layout ────────────────────────────────────────────────────────────────────
 
-format = "$directory$git_branch$git_status$kubernetes$gcloud$nodejs$python$rust$golang$package$cmd_duration$character"
+format = "$directory$git_branch$git_status$container$kubernetes$gcloud$nodejs$python$rust$golang$package$cmd_duration$character"
+
+# ── Container ──────────────────────────────────────────────────────────────────
+
+[container]
+style = "fg:white"
+format = '[$symbol \[$name\]]($style) '
 
 # ── Directory ─────────────────────────────────────────────────────────────────
 
 [directory]
-style = "fg:blue"
+style = "fg:white"
 truncation_length = 3
 truncate_to_repo = true
 truncation_symbol = "…/"
@@ -38,8 +45,8 @@ format = "[$path]($style) "
 
 [git_branch]
 symbol = ""
-style = "fg:bright-black"
-format = "[$symbol $branch]($style)"
+style = "fg:orange"
+format = "[$branch]($style)"
 
 [git_status]
 style = "fg:bright-black"
