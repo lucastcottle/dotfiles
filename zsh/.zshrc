@@ -24,7 +24,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#727272'
 # fzf-tab: visual consistency with dark palette
 zstyle ':fzf-tab:*' preview-window 'right:50%:wrap'
 zstyle ':fzf-tab:*' fzf-flags \
-  '--color=bg+:#202020,fg+:#E1E1E1,hl+:#BAD7FF,fg:#AFAFAF,bg:#151515,hl:#BAD7FF,pointer:#BAD7FF,border:#373737,prompt:#90A959,marker:#F4BF75'
+  '--color=bg+:#1c1c1c,bg:#060606,spinner:#a8a8a8,hl:#c2916a,fg:#e4e4e8,header:#c2916a,info:#8c9cb8,pointer:#a8a8a8,marker:#b09080,fg+:#c7c7c7,prompt:#75a1c7,hl+:#c2916a,border:#060606'
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-completions
