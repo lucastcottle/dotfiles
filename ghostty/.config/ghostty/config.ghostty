@@ -1,1 +1,6 @@
 theme = luna
+font-family = "CommitMono Nerd Font Mono"
+font-size = 15
+macos-titlebar-proxy-icon = hidden
+title = " "
+bell-features = no-title
