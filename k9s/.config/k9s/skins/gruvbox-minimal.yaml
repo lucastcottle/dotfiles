@@ -1,26 +1,26 @@
 # -----------------------------------------------------------------------------
-# luna skin
+# gruvbox-minimal skin
 # A minimal, near-black theme for k9s.
 # -----------------------------------------------------------------------------
 
 # Styles...
-foreground: &foreground "#e4e4e8"
-background: &background "#060606"
-current_line: &current_line "#212121"
-selection: &selection "#384048"
-comment: &comment "#7c7c7c"
-grey: &grey "#888888"
-silver: &silver "#c7c7c7"
-border: &border "#404040"
-orange: &orange "#e19067"
-blue: &blue "#75a1c7"
-purple: &purple "#c4a8d6"
-green: &green "#9eb38e"
-signal: &signal "#c2916a"
-red: &red "#e08585"
-yellow: &yellow "#d9a35a"
-info: &info "#8c9cb8"
-ok: &ok "#6fbe80"
+foreground: &foreground "#f9f5d7"
+background: &background "#221f1d"
+current_line: &current_line "#32302f"
+selection: &selection "#3c3836"
+comment: &comment "#928374"
+grey: &grey "#a89984"
+silver: &silver "#ebdbb2"
+border: &border "#3c3836"
+orange: &orange "#e78a4e"
+blue: &blue "#7daea3"
+purple: &purple "#d3869b"
+green: &green "#a9b665"
+signal: &signal "#ea6962"
+red: &red "#ea6962"
+yellow: &yellow "#d8a657"
+info: &info "#7daea3"
+ok: &ok "#a9b665"
 
 # Skin...
 k9s:

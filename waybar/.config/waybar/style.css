@@ -3,38 +3,38 @@
     font-size: 13px;
 }
 
-@define-color inactive_module_color @luna_comment;
+@define-color inactive_module_color @gruvbox_comment;
 
-@define-color luna_bg #060606;
-@define-color luna_bg_alt #1C1C1C;
-@define-color luna_bg_soft #1F1F1F;
-@define-color luna_surface #333333;
-@define-color luna_selection #384048;
-@define-color luna_border #404040;
-@define-color luna_comment #7C7C7C;
-@define-color luna_grey #888888;
-@define-color luna_grey_light #A8A8A8;
-@define-color luna_silver #C7C7C7;
-@define-color luna_fg #E4E4E8;
-@define-color luna_fg_bright #F0F0F0;
-@define-color luna_error #E08585;
-@define-color luna_warning #D9A35A;
-@define-color luna_info #8C9CB8;
-@define-color luna_hint #B09080;
-@define-color luna_ok #6FBE80;
-@define-color luna_signal #C2916A;
-@define-color luna_keyword #E19067;
-@define-color luna_func #75A1C7;
-@define-color luna_type #C4A8D6;
-@define-color luna_string #9EB38E;
-@define-color luna_black #000000;
-@define-color luna_white #FFFFFF;
+@define-color gruvbox_bg #221f1d;
+@define-color gruvbox_bg_alt #2d2c2b;
+@define-color gruvbox_bg_soft #32302f;
+@define-color gruvbox_surface #3c3836;
+@define-color gruvbox_selection #3c3836;
+@define-color gruvbox_border #3c3836;
+@define-color gruvbox_comment #928374;
+@define-color gruvbox_grey #a89984;
+@define-color gruvbox_grey_light #bdae93;
+@define-color gruvbox_silver #ebdbb2;
+@define-color gruvbox_fg #f9f5d7;
+@define-color gruvbox_fg_bright #fbf1c7;
+@define-color gruvbox_error #ea6962;
+@define-color gruvbox_warning #d8a657;
+@define-color gruvbox_info #7daea3;
+@define-color gruvbox_hint #89b482;
+@define-color gruvbox_ok #a9b665;
+@define-color gruvbox_signal #ea6962;
+@define-color gruvbox_keyword #e78a4e;
+@define-color gruvbox_func #ea6962;
+@define-color gruvbox_type #d3869b;
+@define-color gruvbox_string #d8a657;
+@define-color gruvbox_black #11110f;
+@define-color gruvbox_white #f9f5d7;
 
 window#waybar {
-    background-color: alpha(@luna_bg, 0.98);
-    border-color: alpha(@luna_border, 0.98);
+    background-color: alpha(@gruvbox_bg, 0.98);
+    border-color: alpha(@gruvbox_border, 0.98);
     border-style: solid;
-    color: @luna_fg;
+    color: @gruvbox_fg;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -53,7 +53,7 @@ window#waybar.hidden {
 
 button {
     all: unset;
-    border-color: alpha(@luna_border, 0.5);
+    border-color: alpha(@gruvbox_border, 0.5);
     border-style: solid;
     min-height: 24px;
     min-width: 16px;
@@ -97,70 +97,46 @@ window#waybar #window {
     box-shadow: none;
 }
 
-/* Workspaces - Luna style */
+/* Workspaces - Gruvbox Minimal style */
 #workspaces button {
-    background-color: @luna_bg_alt;
-    color: @luna_fg;
+    background-color: @gruvbox_bg_alt;
+    color: @gruvbox_fg;
     border: none;
-    border-bottom: 2px solid alpha(@luna_border, 0.5);
+    border-bottom: 2px solid alpha(@gruvbox_border, 0.5);
     padding: 0 10px;
     min-height: 24px;
     min-width: 16px;
 }
 
 #workspaces button:hover {
-    background-color: @luna_selection;
+    background-color: @gruvbox_selection;
 }
 
 #workspaces button.focused {
-    background-color: @luna_fg;
-    color: @luna_bg;
-    border-bottom: 2px solid @luna_silver;
+    background-color: @gruvbox_fg;
+    color: @gruvbox_bg;
+    border-bottom: 2px solid @gruvbox_silver;
 }
 
 #workspaces button.urgent {
-    background-color: @luna_signal;
-    color: @luna_bg;
+    background-color: @gruvbox_signal;
+    color: @gruvbox_bg;
 }
 
 /* Mode indicator - signal color for visibility */
 #mode {
-    background-color: @luna_signal;
-    color: @luna_bg;
-}
-
-/* Battery warnings */
-#battery.critical:not(.charging) {
-    color: @luna_error;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes blink {
-    to {
-        background-color: @luna_fg;
-        color: @luna_bg;
-    }
+    background-color: @gruvbox_signal;
+    color: @gruvbox_bg;
 }
 
 /* Muted / inactive modules */
 #network.disconnected,
 #pulseaudio.muted,
 #wireplumber.muted,
-#idle_inhibitor,
-#custom-gammastep,
 #mpd.disconnected,
 #mpd.paused,
 #mpd.stopped {
     color: @inactive_module_color;
-}
-
-#idle_inhibitor.activated,
-#custom-gammastep.active {
-    color: inherit;
 }
 
 /* Tray */
@@ -184,8 +160,22 @@ window#waybar #window {
 
 @keyframes needs-attention {
     to {
-        background-color: alpha(@luna_error, 0.4);
+        background-color: alpha(@gruvbox_error, 0.4);
     }
+}
+
+/* Separator between modules */
+#custom-separator {
+    color: @gruvbox_border;
+    padding: 0 2px;
+    margin: 0;
+    text-shadow: none;
+}
+#custom-separator label {
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    font-size: 11px;
 }
 
 /* Input modules */
@@ -200,12 +190,12 @@ window#waybar #window {
 }
 
 #keyboard-state > label.locked {
-    background: alpha(@luna_black, 0.2);
+    background: alpha(@gruvbox_black, 0.2);
 }
 
 /* Scratchpad */
 #scratchpad {
-    background: alpha(@luna_black, 0.2);
+    background: alpha(@gruvbox_black, 0.2);
 }
 
 #scratchpad.empty {

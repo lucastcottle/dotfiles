@@ -1,26 +1,26 @@
 # ── Palette ───────────────────────────────────────────────────────────────────
-# luna: https://github.com/wtfox/luna.nvim
+# gruvbox-minimal: https://github.com/dybdeskarphet/gruvbox-minimal.nvim
 
-palette = "luna"
+palette = "gruvbox-minimal"
 
-[palettes.luna]
-black = "#000000"
-red = "#e08585"
-orange = "#e19067"
-green = "#6fbe80"
-yellow = "#c2916a"
-blue = "#75a1c7"
-purple = "#c4a8d6"
-cyan = "#75a1c7"
-white = "#c7c7c7"
-bright-black = "#888888"
-bright-red = "#e08585"
-bright-green = "#6fbe80"
-bright-yellow = "#d9a35a"
-bright-blue = "#8c9cb8"
-bright-purple = "#c4a8d6"
-bright-cyan = "#75a1c7"
-bright-white = "#ffffff"
+[palettes.gruvbox-minimal]
+black = "#11110f"
+red = "#ea6962"
+orange = "#e78a4e"
+green = "#a9b665"
+yellow = "#d8a657"
+blue = "#7daea3"
+purple = "#d3869b"
+cyan = "#89b482"
+white = "#f9f5d7"
+bright-black = "#928374"
+bright-red = "#ea6962"
+bright-green = "#a9b665"
+bright-yellow = "#d8a657"
+bright-blue = "#7daea3"
+bright-purple = "#d3869b"
+bright-cyan = "#89b482"
+bright-white = "#f9f5d7"
 
 # ── Layout ────────────────────────────────────────────────────────────────────
 

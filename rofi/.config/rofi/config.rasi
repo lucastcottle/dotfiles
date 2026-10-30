@@ -6,17 +6,17 @@ configuration {
 
 * {
     font: "CommitMono Nerd Font 12";
-    foreground: #E1E1E1;
-    background-color: #151515;
-    active-background: #BAD7FF;
-    active-foreground: #151515;
-    urgent-background: #b46958;
-    urgent-foreground: #151515;
+    foreground: #f9f5d7;
+    background-color: #221f1d;
+    active-background: #bdae93;
+    active-foreground: #221f1d;
+    urgent-background: #ea6962;
+    urgent-foreground: #221f1d;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
-    separatorcolor: #373737;
-    bordercolor: #373737;
+    separatorcolor: #3c3836;
+    bordercolor: #3c3836;
 }
 
 #window {
@@ -88,8 +88,8 @@ configuration {
 }
 
 #element.alternate.normal {
-    background-color: #171717;
-    text-color:       #AFAFAF;
+    background-color: #2d2c2b;
+    text-color:       #bdae93;
 }
 
 #element.alternate.urgent {

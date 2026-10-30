@@ -19,12 +19,12 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # ---- UI color configuration ----
 # Autosuggestions (ghost text as you type)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#727272'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#7c6f64'
 
 # fzf-tab: visual consistency with dark palette
 zstyle ':fzf-tab:*' preview-window 'right:50%:wrap'
 zstyle ':fzf-tab:*' fzf-flags \
-  '--color=bg+:#1c1c1c,bg:#060606,spinner:#a8a8a8,hl:#c2916a,fg:#e4e4e8,header:#c2916a,info:#8c9cb8,pointer:#a8a8a8,marker:#b09080,fg+:#c7c7c7,prompt:#75a1c7,hl+:#c2916a,border:#060606'
+  '--color=bg+:#2d2c2b,bg:#221f1d,spinner:#a89984,hl:#ea6962,fg:#f9f5d7,header:#ea6962,info:#7daea3,pointer:#a89984,marker:#89b482,fg+:#ebdbb2,prompt:#7daea3,hl+:#ea6962,border:#221f1d'
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-completions
@@ -40,10 +40,10 @@ zinit light Aloxaf/fzf-tab
 bindkey -v  # Enables vi mode keybindings
 # add preview to fzf
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#1c1c1c,bg:#060606,spinner:#a8a8a8,hl:#c2916a \
---color=fg:#e4e4e8,header:#c2916a,info:#8c9cb8,pointer:#a8a8a8 \
---color=marker:#b09080,fg+:#c7c7c7,prompt:#75a1c7,hl+:#c2916a \
---color=border:#060606 \
+--color=bg+:#2d2c2b,bg:#221f1d,spinner:#a89984,hl:#ea6962 \
+--color=fg:#f9f5d7,header:#ea6962,info:#7daea3,pointer:#a89984 \
+--color=marker:#89b482,fg+:#ebdbb2,prompt:#7daea3,hl+:#ea6962 \
+--color=border:#221f1d \
 --multi \
 --preview 'bat --color=always --style=numbers --line-range :500 {}' --preview-window=right:50%:wrap"
 

@@ -1,0 +1,58 @@
+[metadata]
+name = "gruvbox-minimal"
+author = "lucas"
+origin_url = "https://github.com/dybdeskarphet/gruvbox-minimal.nvim"
+
+[colors]
+foreground = "#f9f5d7"
+background = "#221f1d"
+cursor_fg = "#221f1d"
+cursor_bg = "#f9f5d7"
+cursor_border = "#f9f5d7"
+selection_fg = "#f9f5d7"
+selection_bg = "#3c3836"
+compose_cursor = "#ea6962"
+visual_bell = "#402a27"
+
+ansi = [
+  "#7c6f64",
+  "#ea6962",
+  "#a9b665",
+  "#d8a657",
+  "#7daea3",
+  "#d3869b",
+  "#89b482",
+  "#f9f5d7",
+]
+
+brights = [
+  "#7c6f64",
+  "#ea6962",
+  "#a9b665",
+  "#d8a657",
+  "#7daea3",
+  "#d3869b",
+  "#89b482",
+  "#f9f5d7",
+]
+
+[colors.indexed]
+16 = "#a89984"
+17 = "#d8a657"
+18 = "#2d2c2b"
+19 = "#3c3836"
+20 = "#7c6f64"
+21 = "#f9f5d7"
+
+[colors.tab_bar]
+background = "#221f1d"
+active_tab.bg_color = "#32302f"
+active_tab.fg_color = "#f9f5d7"
+inactive_tab.bg_color = "#221f1d"
+inactive_tab.fg_color = "#bdae93"
+inactive_tab_hover.bg_color = "#2d2c2b"
+inactive_tab_hover.fg_color = "#a89984"
+new_tab.bg_color = "#221f1d"
+new_tab.fg_color = "#bdae93"
+new_tab_hover.bg_color = "#2d2c2b"
+new_tab_hover.fg_color = "#a89984"

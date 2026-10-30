@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 -- ── Appearance ────────────────────────────────────────────────────────────────
 
-config.color_scheme = 'luna'
+config.color_scheme = 'gruvbox-minimal'
 
 -- ── Font ──────────────────────────────────────────────────────────────────────
 

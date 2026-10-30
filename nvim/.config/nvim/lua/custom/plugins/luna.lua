@@ -14,6 +14,6 @@ return {
         auto=true
       },
     }
-    vim.cmd.colorscheme("luna")
+    -- vim.cmd.colorscheme("luna") -- Uncomment to switch back to luna (gruvbox-minimal is active)
   end,
 }

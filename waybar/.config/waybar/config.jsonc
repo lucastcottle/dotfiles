@@ -15,17 +15,23 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/separator",  
         "idle_inhibitor",
+        "custom/separator",
         "custom/gammastep",
+        "custom/separator",
         "power-profiles-daemon",
+        "custom/separator",
         "pulseaudio",
+        "custom/separator",
         "network",
+        "custom/separator",
         "cpu",
+        "custom/separator",
         "memory",
-        "temperature",
-        "backlight",
-        "battery",
+        "custom/separator",
         "clock",
+        "custom/separator",
         "tray"
     ],
     // Modules configuration
@@ -40,10 +46,10 @@
         "tooltip-format": "{app}: {title}"
     },
     "idle_inhibitor": {
-        "format": "{icon}",
+        "format": "screen wake: {icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "on",
+            "deactivated": "off"
         }
     },
     "custom/gammastep": {
@@ -52,6 +58,10 @@
         "on-click": "~/.config/waybar/gammastep-toggle.sh",
         "return-type": "json",
         "tooltip": true
+    },
+
+    "custom/separator": {
+        "format": "|"
     },
 
     "tray": {
@@ -64,80 +74,33 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "cpu: {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": " {}%"
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
+        "format": "memory: {percentage}%"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{profile}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " ({signalStrength}%)",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "wifi: {signalStrength}%",
+        "format-ethernet": "eth: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "wifi: disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": " {format_source}",
-        "format-source": " {volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+        "format": "volume: {volume}%",
+        "format-bluetooth": "volume: {volume}%",
+        "format-bluetooth-muted": "volume: muted",
+        "format-muted": "volume: muted",
+        "format-source": "{volume}% ",
+        "format-source-muted": ""
     }
 }
