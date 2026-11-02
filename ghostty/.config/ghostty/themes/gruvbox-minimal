@@ -1,0 +1,34 @@
+# name = "gruvbox-minimal"
+# upstream = https://github.com/dybdeskarphet/gruvbox-minimal.nvim
+# Matches the nvim plugin with contrast = "low", theme = "dark".
+# ANSI colours mirror the plugin's terminal_colors mapping.
+
+# base_07
+palette = 0=#7c6f64
+palette = 1=#ea6962
+palette = 2=#a9b665
+palette = 3=#d8a657
+palette = 4=#7daea3
+palette = 5=#d3869b
+palette = 6=#89b482
+# base_15
+palette = 7=#f9f5d7
+
+# The plugin maps bright to the same colours as normal.
+palette = 8=#7c6f64
+palette = 9=#ea6962
+palette = 10=#a9b665
+palette = 11=#d8a657
+palette = 12=#7daea3
+palette = 13=#d3869b
+palette = 14=#89b482
+palette = 15=#f9f5d7
+
+# base_01 — the plugin's Normal background
+background = #221f1d
+# base_15
+foreground = #f9f5d7
+cursor-color = #f9f5d7
+# base_04 — the plugin's Visual background
+selection-background = #3c3836
+selection-foreground = #f9f5d7

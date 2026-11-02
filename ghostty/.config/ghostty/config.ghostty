@@ -1,4 +1,4 @@
-theme = luna
+theme = gruvbox-minimal
 font-family = "CommitMono Nerd Font Mono"
 font-size = 15
 macos-titlebar-proxy-icon = hidden
