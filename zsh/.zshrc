@@ -78,6 +78,23 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 
+# Functions
+
+# ArgoCD is behind Cloudflare Access, which challenges every request rather
+# than just `login`, so the Access token has to go on all of them. A function
+# rather than an alias: the alias form nests a command substitution inside
+# quotes and gets mangled if it ever wraps across lines.
+argocd() {
+  local url="https://argocd.internal.datazoo.com"
+  local tok
+  tok=$(command cloudflared access token "$url" 2>/dev/null)
+  if [[ -z "$tok" ]]; then
+    print -u2 "argocd: no Cloudflare Access token. Run: cloudflared access login $url"
+    return 1
+  fi
+  command argocd --grpc-web -H "cf-access-token: $tok" "$@"
+}
+
 # Add zoxide to path
 export PATH="$HOME/.local/bin:$PATH"
 #go bin in path/
